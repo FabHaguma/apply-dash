@@ -1,0 +1,158 @@
+.companyPageContainer {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.companyHeader {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.companyHeader h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.companyHeader a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+.companyHeader a:hover {
+    text-decoration: underline;
+}
+
+.companyHeader p {
+    color: var(--text-color-light);
+    font-size: 0.95em;
+}
+
+.tellAFriendButton {
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 0.9em;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+.tellAFriendButton:hover {
+    background-color: #218838;
+}
+
+.intelligenceSection, .applicationHistory {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--column-background);
+    border-radius: var(--border-radius);
+}
+
+.intelligenceSection h3, .applicationHistory h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.intelligenceDisplay p {
+    margin: 8px 0;
+    color: var(--text-color);
+}
+.intelligenceDisplay p strong {
+    color: var(--text-color);
+}
+
+.editIntelButton {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.editIntelButton:hover {
+    background-color: #3a7bd5;
+}
+
+.intelligenceForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color-light);
+}
+.intelligenceForm input[type="text"],
+.intelligenceForm textarea {
+    width: calc(100% - 22px); /* Account for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit; /* Ensure font is consistent */
+}
+.intelligenceForm textarea {
+    min-height: 80px;
+}
+.intelligenceForm input[type="checkbox"] {
+    margin-right: 8px;
+}
+.formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+.formActions button {
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.formActions button:first-child {
+    background-color: #6c757d;
+    color: white;
+}
+.formActions button:first-child:hover {
+    background-color: #5a6268;
+}
+.formActions button:last-child {
+    background-color: var(--primary-color);
+    color: white;
+}
+.formActions button:last-child:hover {
+    background-color: #3a7bd5;
+}
+
+.appHistoryList {
+    list-style: none;
+    padding: 0;
+}
+.appHistoryList li {
+    background-color: var(--card-background);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+.appHistoryList li strong {
+    color: var(--primary-color);
+}
+.appHistoryList li p {
+    font-size: 0.9em;
+    color: var(--text-color-light);
+    margin-top: 5px;
+}
+.loading {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2em;
+    color: var(--text-color-light);
+}

@@ -134,3 +134,83 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+# ---------------------------------------
+# Java
+# ---------------------------------------
+*.class
+*.jar
+*.war
+*.ear
+
+# ---------------------------------------
+# Build directories
+# ---------------------------------------
+/target/
+/build/
+
+# ---------------------------------------
+# Logs
+# ---------------------------------------
+*.log
+logs/
+*.pid
+
+# ---------------------------------------
+# IDEs
+# ---------------------------------------
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# VS Code
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# NetBeans
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ---------------------------------------
+# OS-specific
+# ---------------------------------------
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------
+# Lombok
+# (Some tools may generate delomboked files)
+# ---------------------------------------
+delombok/
+
+# ---------------------------------------
+# Environment Files
+# ---------------------------------------
+.env
+*.env
+
+# ---------------------------------------
+# Others
+# ---------------------------------------
+*.swp
+*.swo
+*.bak
+
+# ---------------------------------------
+# Spring Boot
+# ---------------------------------------
+# Ignore local configuration files
+application-local.yml
+application-local.properties

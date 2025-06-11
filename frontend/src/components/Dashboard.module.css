@@ -1,0 +1,168 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  background-color: var(--board-background);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+}
+
+.column {
+  background-color: var(--column-background);
+  width: 280px;
+  min-height: 400px;
+  border-radius: var(--border-radius);
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.column h3 {
+  color: var(--text-color-light);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.card {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: var(--box-shadow);
+  cursor: grab;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.card h4 {
+  margin: 0 0 5px 0;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--text-color-light);
+}
+
+.addButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 2em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+/* Modal Styles */
+.modalBackdrop {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5); display: flex;
+  justify-content: center; align-items: center;
+}
+.modalContent {
+  background-color: white; padding: 20px; border-radius: 8px;
+  width: 400px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.modalContent input, .modalContent textarea {
+  width: 95%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;
+}
+.modalContent textarea { height: 100px; }
+.modalActions { display: flex; justify-content: flex-end; gap: 10px; }
+.modalActions button { padding: 10px 20px; border-radius: 4px; border: none; cursor: pointer; }
+.modalActions button[type="submit"] { background-color: var(--primary-color); color: white; }
+
+.suggestButton {
+  padding: 12px 24px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+.overdue {
+  border: 2px solid #dc3545; /* Red border for overdue items */
+  box-shadow: 0 1px 3px rgba(220,53,69,0.2), 0 1px 2px rgba(220,53,69,0.14);
+}
+.nextActionDate {
+    font-size: 0.8em;
+    color: #dc3545; /* Red for overdue text */
+    margin-top: 5px;
+}
+.overdue .nextActionDate {
+    font-weight: bold;
+}
+
+.companyLink {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+.companyLink:hover p {
+    text-decoration: underline; /* Add underline on hover for p tag inside */
+}
+
+@media (max-width: 900px) {
+  .board {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 10px;
+    align-items: stretch;
+    overflow-x: unset;
+    overflow-y: visible;
+  }
+  .column {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .board {
+    display: block;
+    flex-direction: unset;
+    gap: unset;
+    padding: 5px;
+    overflow-x: unset;
+    overflow-y: visible;
+  }
+  .column {
+    width: 100%;
+    min-width: 0;
+    padding: 5px;
+    margin-bottom: 24px;
+  }
+  .addButton {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5em;
+    bottom: 16px;
+    right: 16px;
+  }
+  .suggestButton {
+    width: 100%;
+    font-size: 1em;
+    padding: 10px 0;
+  }
+  .modalContent {
+    width: 95vw;
+    min-width: unset;
+    max-width: 99vw;
+    padding: 10px;
+  }
+}
