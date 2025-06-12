@@ -18,7 +18,9 @@ const CompanyIntelligencePage = () => {
 
     useEffect(() => {
         const fetchData = async () => {
+            console.log(`Fetching data for company ID: ${id}`);
             const companyData = await getCompanyById(id);
+            console.log('Company data fetched:', companyData);
             setCompany(companyData);
             setFormData({ // Populate form with existing data
                 vibes: companyData.vibes || '',

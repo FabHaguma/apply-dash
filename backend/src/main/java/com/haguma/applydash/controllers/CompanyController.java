@@ -89,9 +89,9 @@ public class CompanyController {
 
         // Endpoint for fetching a single company by ID
         @GetMapping("/{id}")
-        public ResponseEntity<Company> getCompanyById(@PathVariable Long id) {
+        public ResponseEntity<CompanyDto> getCompanyById(@PathVariable Long id) {
                 return companyRepository.findById(id)
-                                .map(ResponseEntity::ok)
+                                .map(company -> ResponseEntity.ok(DtoMapper.toCompanyDto(company)))
                                 .orElse(ResponseEntity.notFound().build());
         }
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { getApplications, createApplication, updateApplication } from '../services/api';
+import { getApplications, createApplication, updateApplication, deleteApplication } from '../services/api';
 
 const useApplications = () => {
     const [applications, setApplications] = useState([]);
@@ -76,7 +76,7 @@ const useApplications = () => {
         }
     }, [applications]);
 
-    const deleteApplication = useCallback(async (applicationId) => {
+    const removeApplication = useCallback(async (applicationId) => {
         try {
             const confirmed = window.confirm("Are you sure you want to delete this application?");
             if (!confirmed) return false;
@@ -90,7 +90,7 @@ const useApplications = () => {
         }
     }, []);
 
-    return { applications, loading, error, fetchApplications, addApplication, updateApplicationStatus, updateApplicationDetails, deleteApplication };
+    return { applications, loading, error, fetchApplications, addApplication, updateApplicationStatus, updateApplicationDetails, removeApplication };
 };
 
 export default useApplications;

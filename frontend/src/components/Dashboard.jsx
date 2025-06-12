@@ -33,7 +33,7 @@ const ApplicationCard = ({ application, onEdit }) => {
 };
 
 const Dashboard = () => {
-    const { applications, loading, error, addApplication, updateApplicationStatus, updateApplicationDetails, deleteApplication  } = useApplications(); // Use the hook
+    const { applications, loading, error, addApplication, updateApplicationStatus, updateApplicationDetails, removeApplication  } = useApplications(); // Use the hook
 
     const [isApplicationModalOpen, setIsApplicationModalOpen] = useState(false);
     const [editingApp, setEditingApp] = useState(null);
@@ -133,7 +133,7 @@ const Dashboard = () => {
                     onClose={handleCloseApplicationModal}
                     appData={editingApp}
                     onSave={handleSaveApplication}
-                    onDelete={deleteApplication}
+                    onDelete={removeApplication}
                 />
             )}
         </div>
