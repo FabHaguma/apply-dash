@@ -1,0 +1,12 @@
+C:\Users\Fabrice\My_Documents\Programming\Dockered\apply-dash\backend\src\main\java\com\haguma\applydash\ApplyDashApplication.java
+C:\Users\Fabrice\My_Documents\Programming\Dockered\apply-dash\backend\src\main\java\com\haguma\applydash\config\DataInitializer.java
+C:\Users\Fabrice\My_Documents\Programming\Dockered\apply-dash\backend\src\main\java\com\haguma\applydash\config\WebConfig.java
+C:\Users\Fabrice\My_Documents\Programming\Dockered\apply-dash\backend\src\main\java\com\haguma\applydash\controllers\CompanyController.java
+C:\Users\Fabrice\My_Documents\Programming\Dockered\apply-dash\backend\src\main\java\com\haguma\applydash\controllers\TrackedApplicationController.java
+C:\Users\Fabrice\My_Documents\Programming\Dockered\apply-dash\backend\src\main\java\com\haguma\applydash\dto\CompanyDto.java
+C:\Users\Fabrice\My_Documents\Programming\Dockered\apply-dash\backend\src\main\java\com\haguma\applydash\dto\DtoMapper.java
+C:\Users\Fabrice\My_Documents\Programming\Dockered\apply-dash\backend\src\main\java\com\haguma\applydash\dto\TrackedApplicationDto.java
+C:\Users\Fabrice\My_Documents\Programming\Dockered\apply-dash\backend\src\main\java\com\haguma\applydash\entities\Company.java
+C:\Users\Fabrice\My_Documents\Programming\Dockered\apply-dash\backend\src\main\java\com\haguma\applydash\entities\TrackedApplication.java
+C:\Users\Fabrice\My_Documents\Programming\Dockered\apply-dash\backend\src\main\java\com\haguma\applydash\repositories\CompanyRepository.java
+C:\Users\Fabrice\My_Documents\Programming\Dockered\apply-dash\backend\src\main\java\com\haguma\applydash\repositories\TrackedApplicationRepository.java

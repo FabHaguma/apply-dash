@@ -1,0 +1,14 @@
+com\haguma\applydash\config\WebConfig$1.class
+com\haguma\applydash\dto\TrackedApplicationDto.class
+com\haguma\applydash\config\DataInitializer.class
+com\haguma\applydash\config\DataInitializer$1.class
+com\haguma\applydash\entities\TrackedApplication.class
+com\haguma\applydash\repositories\CompanyRepository.class
+com\haguma\applydash\controllers\TrackedApplicationController.class
+com\haguma\applydash\controllers\CompanyController.class
+com\haguma\applydash\config\WebConfig.class
+com\haguma\applydash\dto\CompanyDto.class
+com\haguma\applydash\repositories\TrackedApplicationRepository.class
+com\haguma\applydash\entities\Company.class
+com\haguma\applydash\ApplyDashApplication.class
+com\haguma\applydash\dto\DtoMapper.class
