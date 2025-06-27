@@ -9,34 +9,41 @@ services:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
-      - postgres_data:/var/lib/postgresql/data # Persist database data
+      - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
 
   backend:
     build:
-      context: ./backend # Path to your backend's Dockerfile
+      context: ./backend
     container_name: applydash_backend
     depends_on:
       - database
     environment:
-      # These variables are taken from the .env file
       - SPRING_DATASOURCE_URL=jdbc:postgresql://database:5432/applydash_db
       - SPRING_DATASOURCE_USERNAME=${DB_USER}
       - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
       - APPLYDASH_API_SECRET_KEY=${API_SECRET_KEY}
-      # The CORS origin will be set differently in production
-      - CORS_ALLOWED_ORIGINS=${CORS_ORIGIN} # This will be set on the server
+      - CORS_ALLOWED_ORIGINS=https://applydash.haguma.com
     restart: unless-stopped
 
   frontend:
     build:
-      context: ./frontend # Path to your frontend's Dockerfile
+      context: ./frontend
     container_name: applydash_frontend
-    ports:
-      - "80:80" # Map port 80 of your VPS to port 80 of the container
+    # NO PORTS EXPOSED HERE (Caddy will handle external traffic)
     depends_on:
       - backend
     restart: unless-stopped
+    networks:
+      - default # Keep it on its default network to talk to the backend/db
+      - caddy_network # Also connect it to the shared Caddy network
+    # --------------------------
 
 volumes:
   postgres_data:
+  
+# ---- AND ADD THIS AT THE BOTTOM ----
+networks:
+  caddy_network:
+    external: true
+# ------------------------------------

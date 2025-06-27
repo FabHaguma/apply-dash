@@ -1,0 +1,4 @@
+applydash.haguma.com {
+    # Proxy all traffic to the frontend Nginx service
+    reverse_proxy frontend:80
+}
